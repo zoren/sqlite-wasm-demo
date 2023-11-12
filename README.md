@@ -12,3 +12,5 @@ node node.js
 ```
 npm run dev
 ```
+
+![Screenshot of browser showing results of running sqlite demo on main and worker thread.](/screenshots/browser.png?raw=true)
