@@ -6,13 +6,13 @@ const isMainThread = self.window === self;
 
 export const demoOnMain = async (consolish) => {
   if (!isMainThread) {
-    throw new Error("demoOnMain() must be called from the main thread.");
+    throw new Error("demoOnMain() must be called on the main thread.");
   }
   const sqlite3 = await sqlite3InitModule();
 
-  consolish.log("Running demo from main thread.");
+  consolish.log("Running demo on main thread.");
   demo1(sqlite3, consolish, () =>
-    consolish.log("Finished running demo from main thread.")
+    consolish.log("Finished running demo on main thread.")
   );
 };
 

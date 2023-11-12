@@ -16,9 +16,9 @@ export const demoInWorker = async (sqlite3InitModule, postMessage) => {
     printErr: error,
   });
 
-  log("Running demo from Worker thread.");
+  log("Running demo on worker thread.");
 
   demo1(sqlite3, { log, warn, error }, () =>
-    log("Finished running demo from Worker.")
+    log("Finished running demo on worker.")
   );
 };
