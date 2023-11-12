@@ -1,0 +1,17 @@
+{
+  "name": "sqlite-wasm-demo",
+  "version": "1.0.0",
+  "description": "A little demo of sqlite-wasm running in node and browser",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sqlite.org/sqlite-wasm": "github:zoren/sqlite-wasm#node",
+    "vite": "^4.5.0"
+  }
+}
