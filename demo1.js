@@ -18,8 +18,7 @@
 
 export const demo1 = async function (
   sqlite3InitModule,
-  { log, warn },
-  onDone
+  { log, warn }
 ) {
   const sqlite3 = await sqlite3InitModule();
 
@@ -28,7 +27,6 @@ export const demo1 = async function (
 
   log("sqlite3 version", capi.sqlite3_libversion(), capi.sqlite3_sourceid());
   const db = new oo.DB("/mydb.sqlite3", "ct");
-  db.onclose = { after: onDone };
   log("transient db =", db.filename);
 
   /**

@@ -9,10 +9,10 @@ export const demoOnMain = async (consolish) => {
   }
 
   consolish.log("Running demo on main thread.");
-  await demo1(sqlite3InitModuleNode, consolish, () =>
-    consolish.log("Finished running demo on main thread.")
-  );
+  await demo1(sqlite3InitModuleNode, consolish);
+  consolish.log("Finished running demo on main thread.");
 };
 
-if (!isMainThread)
+if (!isMainThread){
   demoInWorker(sqlite3InitModuleNode, (value) => parentPort.postMessage(value));
+}
