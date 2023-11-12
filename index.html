@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
-    <title>Hello, sqlite3</title>
+    <title>Hello, sqlite3 in vite</title>
     <style>
       .warning,
       .error {
@@ -19,15 +19,38 @@
         font-family: monospace;
         white-space: break-spaces;
       }
+      .logcontainer {
+        display: flex;
+        flex-direction: row;
+      }
     </style>
   </head>
   <body>
-    <h1>1-2-sqlite3 demo</h1>
+    <h1>1-2-sqlite3 demo with vite</h1>
+    <div class="logcontainer">
+      <div id="mainThreadLog"></div>
+      <div id="workerThreadLog"></div>
+    </div>
     <script type="module">
-      import sqlite3InitModule from "@sqlite.org/sqlite-wasm";
-      import { doDemo } from "./demo.js";
-      const sqlite3 = await sqlite3InitModule();
-      doDemo(sqlite3);
+      import {} from "./browserRunner.js";
+
+      // const url = new URL("./browser.js", import.meta.url);
+      // const worker = new Worker(url, { type: "module" });
+      // const logHtml = function (cssClass, ...args) {
+      //   const ln = document.createElement("div");
+      //   if (cssClass) ln.classList.add(cssClass);
+      //   ln.append(document.createTextNode(args.join(" ")));
+      //   document.body.append(ln);
+      // };
+      // worker.onmessage = function ({ data }) {
+      //   switch (data.type) {
+      //     case "log":
+      //       logHtml(data.payload.cssClass, ...data.payload.args);
+      //       break;
+      //     default:
+      //       logHtml("error", "Unhandled message:", data.type);
+      //   }
+      // };
     </script>
   </body>
 </html>
