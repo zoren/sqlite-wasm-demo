@@ -5,6 +5,7 @@ import { demoOnMain } from "./nodeWorker.js";
 await demoOnMain(console);
 
 console.log()
+console.log('-'.repeat(120))
 console.log()
 
 import { Worker } from "node:worker_threads";
