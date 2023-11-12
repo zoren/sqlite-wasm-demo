@@ -16,7 +16,9 @@ const consolishLogger = (outputElement) => ({
 const mainLogger = consolishLogger(document.getElementById('mainThreadLog'));
 
 // run worker on main thread
-demoOnMain(mainLogger);
+await demoOnMain(mainLogger);
+
+console.log('main thread finished')
 
 const workerLogger = consolishLogger(document.getElementById('workerThreadLog'));
 

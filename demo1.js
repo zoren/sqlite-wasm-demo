@@ -16,7 +16,13 @@
   It now runs both in the browser and in Node.js.
 */
 
-export const demo1 = function (sqlite3, { log, warn }, onDone) {
+export const demo1 = async function (
+  sqlite3InitModule,
+  { log, warn },
+  onDone
+) {
+  const sqlite3 = await sqlite3InitModule();
+
   const capi = sqlite3.capi /*C-style API*/,
     oo = sqlite3.oo1; /*high-level OO API*/
 

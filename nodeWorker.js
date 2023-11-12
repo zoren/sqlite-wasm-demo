@@ -7,10 +7,9 @@ export const demoOnMain = async (consolish) => {
   if (!isMainThread) {
     throw new Error("demoOnMain() must be called on the main thread.");
   }
-  const sqlite3 = await sqlite3InitModuleNode();
 
   consolish.log("Running demo on main thread.");
-  demo1(sqlite3, consolish, () =>
+  await demo1(sqlite3InitModuleNode, consolish, () =>
     consolish.log("Finished running demo on main thread.")
   );
 };
