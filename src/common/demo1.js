@@ -16,8 +16,9 @@
   It now runs both in the browser and in Node.js.
 */
 
+import sqlite3InitModule from "@sqlite.org/sqlite-wasm";
+
 export const demo1 = async function (
-  sqlite3InitModule,
   { log, warn }
 ) {
   const sqlite3 = await sqlite3InitModule();
