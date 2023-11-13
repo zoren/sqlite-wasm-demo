@@ -1,4 +1,4 @@
-import { demoOnMain } from "./browserWorker.js";
+import { demoOnMain } from "./worker.js";
 
 const createLogLine = (cssClass, args) => {
   const ln = document.createElement("div");
@@ -23,7 +23,7 @@ console.log('main thread finished')
 const workerLogger = consolishLogger(document.getElementById('workerThreadLog'));
 
 // run worker on worker thread
-const worker = new Worker(new URL("./browserWorker.js", import.meta.url), {
+const worker = new Worker(new URL("./worker.js", import.meta.url), {
   type: "module",
 });
 

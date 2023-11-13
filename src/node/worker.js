@@ -1,7 +1,7 @@
 import { sqlite3InitModuleNode } from "@sqlite.org/sqlite-wasm";
 import { isMainThread, parentPort } from "node:worker_threads";
-import { demo1 } from "./demo1.js";
-import { demoInWorker } from "./worker.js";
+import { demo1 } from "../common/demo1.js";
+import { demoInWorker } from "../common/worker.js";
 
 export const demoOnMain = async (consolish) => {
   if (!isMainThread) {

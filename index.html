@@ -32,25 +32,8 @@
       <div id="workerThreadLog"></div>
     </div>
     <script type="module">
-      import {} from "./browserRunner.js";
+      import {} from "./src/browser/runner.js";
 
-      // const url = new URL("./browser.js", import.meta.url);
-      // const worker = new Worker(url, { type: "module" });
-      // const logHtml = function (cssClass, ...args) {
-      //   const ln = document.createElement("div");
-      //   if (cssClass) ln.classList.add(cssClass);
-      //   ln.append(document.createTextNode(args.join(" ")));
-      //   document.body.append(ln);
-      // };
-      // worker.onmessage = function ({ data }) {
-      //   switch (data.type) {
-      //     case "log":
-      //       logHtml(data.payload.cssClass, ...data.payload.args);
-      //       break;
-      //     default:
-      //       logHtml("error", "Unhandled message:", data.type);
-      //   }
-      // };
     </script>
   </body>
 </html>

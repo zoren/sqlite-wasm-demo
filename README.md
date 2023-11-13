@@ -12,7 +12,7 @@ npm i
 ## Running in node
 
 ```
-node node.js
+node src/node/runner.js
 ```
 
 Should give you something like this:

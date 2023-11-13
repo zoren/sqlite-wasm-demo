@@ -1,6 +1,6 @@
 import sqlite3InitModule from "@sqlite.org/sqlite-wasm";
-import { demo1 } from "./demo1.js";
-import { demoInWorker } from "./worker.js";
+import { demo1 } from "../common/demo1.js";
+import { demoInWorker } from "../common/worker.js";
 
 const isMainThread = self.window === self;
 
