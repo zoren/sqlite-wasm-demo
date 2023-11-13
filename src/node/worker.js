@@ -1,4 +1,4 @@
-import { sqlite3InitModuleNode } from "@sqlite.org/sqlite-wasm";
+import sqlite3InitModule from "@sqlite.org/sqlite-wasm";
 import { isMainThread, parentPort } from "node:worker_threads";
 import { demo1 } from "../common/demo1.js";
 import { demoInWorker } from "../common/worker.js";
@@ -9,10 +9,10 @@ export const demoOnMain = async (consolish) => {
   }
 
   consolish.log("Running demo on main thread.");
-  await demo1(sqlite3InitModuleNode, consolish);
+  await demo1(sqlite3InitModule, consolish);
   consolish.log("Finished running demo on main thread.");
 };
 
 if (!isMainThread){
-  demoInWorker(sqlite3InitModuleNode, (value) => parentPort.postMessage(value));
+  demoInWorker(sqlite3InitModule, (value) => parentPort.postMessage(value));
 }
