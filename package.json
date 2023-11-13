@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sqlite.org/sqlite-wasm": "github:zoren/sqlite-wasm#node",
+    "@sqlite.org/sqlite-wasm": "github:sqlite/sqlite-wasm#node",
     "vite": "^4.5.0"
   }
 }
